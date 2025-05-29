@@ -136,7 +136,7 @@ public class LectureController {
         System.out.println();
         System.out.println();
         for (LectureDTO lectureDTO : lecturesByCategory) {
-            System.out.println(i+". " + lectureDTO.getTitle() + "  [ 평점 : "+ lectureDTO.getFavorite_count() + " ]");
+            System.out.println(lectureDTO.getId()+". " + lectureDTO.getTitle() + "  [ 평점 : "+ lectureDTO.getFavorite_count() + " ]");
             System.out.println();
         }
         System.out.println();

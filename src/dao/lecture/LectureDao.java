@@ -33,7 +33,7 @@ public class LectureDao {
                         rs.getString("title"),
                         rs.getInt("price"),
                         rs.getString("description"),
-                        rs.getInt("favorite_count")
+                        rs.getInt("rating")
                 );
                 lectureDTOS.add(lectureDTO);
             }

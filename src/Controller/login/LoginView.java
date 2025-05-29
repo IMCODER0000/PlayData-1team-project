@@ -51,6 +51,7 @@ public class LoginView {
             System.out.println();
             System.out.println("아이디 또는 비밀번호가 틀렸습니다.");
             System.out.println();
+            System.out.println("================================");
             System.out.println();
             login();
         } catch (InterruptedException e) {

@@ -16,10 +16,10 @@ public class PointController {
         System.out.println("           포인트 충전            ");
         System.out.println();
         System.out.println();
-        System.out.print(" 금액 :           ");
+        System.out.print(" 금액 :  ");
         int amount = sc.nextInt();
         System.out.println();
-        System.out.print(" 전화번호 :           ");
+        System.out.print(" 전화번호 : ");
         int tell = sc.nextInt();
         System.out.println();
         System.out.println();
@@ -46,10 +46,13 @@ public class PointController {
         System.out.println("==============================");
 
         if(check == 1){
-            System.out.print("결제 중입니다");
+
 
             int result = pointDao.PointAdd(userDTO, account);
             AddController.addEditor();
+            System.out.println();
+            System.out.println();
+            System.out.print("결제 중입니다");
             for (int i = 0; i < 3; i++) {
                 try {
                     Thread.sleep(500);
