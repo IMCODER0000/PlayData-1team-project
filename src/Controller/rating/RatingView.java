@@ -1,10 +1,9 @@
 package Controller.rating;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 import dao.rating.RatingDao;
 import dto.user.UserDTO;
 
@@ -29,7 +28,7 @@ public class RatingView {
 	    
 	    if(result>=1) {
 	    	System.out.println("평점 등록에 성공하였습니다.");
-			LandingView.LandingLogin(userDTO);
+			LandingController.LandingLogin(userDTO);
 	    } else {
 	    	System.out.println("평점 등록에 실패하였습니다.");
 		}

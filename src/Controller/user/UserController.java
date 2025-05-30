@@ -1,6 +1,6 @@
 package Controller.user;
 
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 import Controller.lecture.LectureController;
 import Controller.rating.RatingView;
 import dao.user.UserLecturesDao;
@@ -34,7 +34,7 @@ public class UserController {
             String input = sc.nextLine();
 
             if (input.isEmpty()) {
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             } else {
                 System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
             }
@@ -83,7 +83,7 @@ public class UserController {
 //            System.out.println();
 //            System.out.println("=================================");
         } else if (input == 3) {
-            LandingView.LandingLogin(userDTO);
+            LandingController.LandingLogin(userDTO);
         } else{
             System.out.println("=================================");
             System.out.println();

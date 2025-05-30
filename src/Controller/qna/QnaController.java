@@ -1,6 +1,6 @@
 package Controller.qna;
 
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 import dao.qna.QnaDao;
 import dto.qna.QnaStatisticsDTO;
 import dto.qna.QnaSummaryDTO;
@@ -42,14 +42,14 @@ public class QnaController {
             if(input == 1){
                 QnaAdd(userDTO);
             } else if (input == 2){
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             } else {
                 System.out.println("==================================");
                 System.out.println("           잘못된 입력입니다.         ");
                 System.out.println("==================================");
                 System.out.println();
                 System.out.println();
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             }
 
         } else {
@@ -83,7 +83,7 @@ public class QnaController {
                 QnaGetByCount(userDTO, num);
 
             } else if (input == 3) {
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
 
             } else{
                     System.out.println("==================================");
@@ -91,7 +91,7 @@ public class QnaController {
                     System.out.println("==================================");
                     System.out.println();
                     System.out.println();
-                    LandingView.LandingLogin(userDTO);
+                    LandingController.LandingLogin(userDTO);
                 }
 
 
@@ -198,7 +198,7 @@ public class QnaController {
             String input = sc.nextLine();
 
             if (input.isEmpty()) {
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             } else {
                 System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
             }
@@ -229,7 +229,7 @@ public class QnaController {
             } else if (input == 2) {
                 QnaMain(userDTO);
             } else{
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             }
 
 
@@ -259,7 +259,7 @@ public class QnaController {
             String input = sc.nextLine();
 
             if (input.isEmpty()) {
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             } else {
                 System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
             }

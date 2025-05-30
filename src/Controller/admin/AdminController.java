@@ -1,16 +1,10 @@
 package Controller.admin;
 
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 import dao.admin.AdminDAO;
-import dao.qna.QnaDao;
 import dto.admin.DashboardStats;
-import dto.qna.QnaSummaryDTO;
-import dto.user.UserDTO;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class AdminController {
 
@@ -36,7 +30,7 @@ public class AdminController {
         System.out.println("========================================");
 
 
-        LandingView.LandingAdmin();
+        LandingController.LandingAdmin();
 
     }
 

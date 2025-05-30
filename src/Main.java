@@ -1,10 +1,10 @@
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 
 import java.sql.SQLException;
 
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        LandingView.LandingNotLogin();
+        LandingController.LandingNotLogin();
     }
 }

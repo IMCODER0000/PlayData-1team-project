@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 import dao.searching.SearchingDao;
 import dto.searching.SearchingDTO;
 import dto.user.UserDTO;
@@ -44,7 +44,7 @@ public class SearchingController {
 		String input = sc.nextLine();
 
 		if (input.isEmpty()) {
-			LandingView.LandingLogin(userDTO);
+			LandingController.LandingLogin(userDTO);
 		} else {
 			System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
 		}
@@ -112,10 +112,10 @@ public class SearchingController {
 
 
 		} else if (input == 2){
-			LandingView.LandingNotLogin();
+			LandingController.LandingNotLogin();
 		} else{
 			System.out.println("잘못된 입력입니다.");
-			LandingView.LandingNotLogin();
+			LandingController.LandingNotLogin();
 		}
 
 

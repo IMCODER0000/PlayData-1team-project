@@ -1,7 +1,6 @@
 package Controller.lecture;
 
-import Controller.landing.LandingView;
-import Controller.login.LoginView;
+import Controller.landing.LandingController;
 import Controller.payment.PaymentView;
 import Controller.user.UserController;
 import dao.lecture.LectureDao;
@@ -65,9 +64,9 @@ public class LectureController {
                 break;
             case 7:
                 if(userDTO.getIsLogin()){
-                    LandingView.LandingLogin(userDTO);
+                    LandingController.LandingLogin(userDTO);
                 } else{
-                    LandingView.LandingNotLogin();
+                    LandingController.LandingNotLogin();
                 }
                 break;
         }
@@ -118,7 +117,7 @@ public class LectureController {
                 getLectures("소프트 스킬 및 커뮤니케이션");
                 break;
             case 7:
-                LandingView.LandingNotLogin();
+                LandingController.LandingNotLogin();
                 break;
         }
 
@@ -148,7 +147,7 @@ public class LectureController {
         String input = sc.nextLine();
 
         if (input.isEmpty()) {
-            LandingView.LandingNotLogin();
+            LandingController.LandingNotLogin();
         } else {
             System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
         }
@@ -182,7 +181,7 @@ public class LectureController {
         String input = sc.nextLine();
 
         if (choice == 3) {
-            LandingView.LandingLogin(userDTO);
+            LandingController.LandingLogin(userDTO);
         } else if(choice == 2) {
 
             System.out.println();
@@ -193,7 +192,7 @@ public class LectureController {
             int result = lectureDao.favoriteAdd(num, userDTO.getId());
             if(result != 1){
                 System.out.println("등록 실패");
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             } else{
                 System.out.println("======================================");
                 System.out.println();
@@ -201,7 +200,7 @@ public class LectureController {
                 System.out.println();
                 System.out.println("======================================");
 
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             }
 
         } else if (choice == 1) {
@@ -236,7 +235,7 @@ public class LectureController {
             String input = sc.nextLine();
 
             if (input.isEmpty()) {
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             } else {
                 System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
             }
@@ -275,10 +274,10 @@ public class LectureController {
                 }
 
             } else if (input == 3) {
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             } else {
                 System.out.println("잘못된 입력 입니다.");
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             }
 
 
@@ -451,7 +450,7 @@ public class LectureController {
             String input = sc.nextLine();
 
             if (input.isEmpty()) {
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
             } else {
                 System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
             }

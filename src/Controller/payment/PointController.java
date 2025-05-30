@@ -1,7 +1,7 @@
 package Controller.payment;
 
 import Controller.add.AddController;
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 import dao.payment.PointDao;
 import dto.user.UserDTO;
 
@@ -79,7 +79,7 @@ public class PointController {
             PointAddSuccess(userDTO);
 
         } else if (check == 2){
-            LandingView.LandingLogin(userDTO);
+            LandingController.LandingLogin(userDTO);
         } else{
             System.out.println("==============================");
             System.out.println("잘못입력 하셨습니다");
@@ -107,7 +107,7 @@ public class PointController {
         String input = sc.nextLine();
 
         if (input.isEmpty()) {
-            LandingView.LandingLogin(userDTO);
+            LandingController.LandingLogin(userDTO);
         } else {
             System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
         }

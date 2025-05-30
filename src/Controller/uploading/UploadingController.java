@@ -3,7 +3,7 @@ package Controller.uploading;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 import dao.uploading.UploadingDAO;
 import dto.uploading.UploadingDTO;
 import dto.user.UserDTO;
@@ -29,7 +29,7 @@ public class UploadingController {
 
         dao.uploadInsert(upload, userDTO);
 
-        LandingView.LandingLogin(userDTO);
+        LandingController.LandingLogin(userDTO);
     }
 	
 }

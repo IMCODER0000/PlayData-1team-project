@@ -2,7 +2,7 @@ package Controller.landing;
 
 import Controller.admin.AdminController;
 import Controller.lecture.LectureController;
-import Controller.login.LoginView;
+import Controller.login.LoginContoller;
 import Controller.payment.PointController;
 import Controller.qna.QnaController;
 import Controller.uploading.UploadingController;
@@ -13,7 +13,7 @@ import dto.user.UserDTO;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class LandingView {
+public class LandingController {
 
     public static void LandingNotLogin() throws SQLException {
         Scanner sc = new Scanner(System.in);
@@ -37,11 +37,11 @@ public class LandingView {
         System.out.println("======================================");
 
         if(choice == 1){
-            LoginView.login();
+            LoginContoller.login();
         } else if(choice == 2){
             lectureController.LectureCategory();
         } else if(choice == 0){
-            LoginView.join();
+            LoginContoller.join();
         } else{
             System.out.println("======================================");
             System.out.println("        이용해주셔서 감사합니다.       ");

@@ -1,7 +1,7 @@
 package Controller.login;
 
 import Controller.add.AddController;
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 import dao.login.LoginDao;
 import dto.login.JoinDTO;
 import dto.user.UserDTO;
@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
-public class LoginView {
+public class LoginContoller {
 
     public static void login() throws SQLException {
         Scanner sc = new Scanner(System.in);
@@ -39,9 +39,9 @@ public class LoginView {
             UserDTO userDTO = loginDao.Login(id, password);
 
             if(userDTO.getGrade().equals("관리자")){
-                LandingView.LandingAdmin();
+                LandingController.LandingAdmin();
             } else{
-                LandingView.LandingLogin(userDTO);
+                LandingController.LandingLogin(userDTO);
 
             }
         } catch (SQLException e) {
@@ -91,7 +91,7 @@ public class LoginView {
 
             if (result == 1) {
                 System.out.println("회원가입이 완료되었습니다.");
-                LoginView.login();
+                LoginContoller.login();
             } else {
                 System.out.println("회원가입에 실패했습니다.");
                 join();

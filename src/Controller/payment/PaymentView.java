@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 import dao.payment.PaymentDao;
 import dto.payment.PaymentDTO;
 import dto.user.UserDTO;
@@ -93,7 +93,7 @@ public class PaymentView {
 			String input = sc.nextLine();
 
 			if (input.isEmpty()) {
-				LandingView.LandingLogin(userDTO);
+				LandingController.LandingLogin(userDTO);
 			} else {
 				System.out.println("잘못된 입력입니다. 프로그램을 종료합니다.");
 			}

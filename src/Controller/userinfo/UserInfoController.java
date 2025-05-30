@@ -1,12 +1,11 @@
 package Controller.userinfo;
 
-import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import Controller.landing.LandingView;
+import Controller.landing.LandingController;
 import dao.userinfo.UserInfoDao;
 import dto.user.UserDTO;
 import dto.userinfo.UserInfoDTO;
@@ -30,7 +29,7 @@ public class UserInfoController {
                 case 2: editUserInfo(userDTO); break;
                 case 3: deleteUserInfo(userDTO); break;
                 case 0:
-					LandingView.LandingLogin(userDTO); break;
+					LandingController.LandingLogin(userDTO); break;
                 default:
                     System.out.println("잘못된 번호를 입력하셨습니다. 다시 입력해주세요.");
             }
